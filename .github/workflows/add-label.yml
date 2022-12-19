@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions-ecosystem/action-add-labels@v1
-        if: ${{ startsWith(github.event.issue.body, '/Security Request for Information (RFI)') }}
+        if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
         with:
           labels: action-test-success
