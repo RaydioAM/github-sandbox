@@ -1,7 +1,11 @@
 name: Workflow A - Label
 
+# on:
+#  workflow_call:
+
 on:
-  workflow_call:
+  issues:
+    types: [opened]
 
 jobs:
   label:
