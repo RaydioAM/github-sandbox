@@ -1,15 +1,27 @@
-name: Add label to Salesforce Security RFI Issues
+name: Identify and label RFI Issues
 
 on:
   issues:
-    types: opened
+    types: [opened]
 
 jobs:
-  add_label:
+  label:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions-ecosystem/action-add-labels@v1
-        if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
-        with:
-          labels: action-test-success
+    - name: ADD LABEL
+    - uses: actions/checkout@v2
+    - uses: actions-ecosystem/action-add-labels@v1
+      if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
+      with:
+        labels: activity-security-questionnaire
+  project:
+    needs: label
+    runs-on: ubuntu-latest
+    steps:
+    - name: ADD TO PROJECT
+    - uses: srggrs/assign-one-project-github-action@1.2.0
+      if: |
+        contains(github.event.issue.labels.*.name, 'activity-security-questionnaire')
+      with:
+        project: 'https://github.com/users/RaydioAM/projects/6'
+        column_name: 'TestCol1'
