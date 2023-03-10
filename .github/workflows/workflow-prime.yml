@@ -7,5 +7,5 @@ on:
 jobs:
   call-A:
     uses: ./.github/workflows/workflow-A.yml
-  call-B:
-    uses: ./.github/workflows/workflow-B.yml
+  #call-B:
+    #uses: ./.github/workflows/workflow-B.yml

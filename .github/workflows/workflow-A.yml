@@ -13,3 +13,6 @@ jobs:
       if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
       with:
         labels: activity-security-questionnaire
+  call_next:
+    call-B:
+      uses: ./.github/workflows/workflow-B.yml
