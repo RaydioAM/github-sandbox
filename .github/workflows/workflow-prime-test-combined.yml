@@ -1,0 +1,23 @@
+name: Salesforce Security RFI - Test Combined Workflow
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add-label:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions-ecosystem/action-add-labels@v1
+      if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
+      with:
+        labels: activity-security-questionnaire
+  move-to-project:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/add-to-project@v0.4.1
+      if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
+      with:
+        project-url: https://github.com/users/RaydioAM/projects/3
+        github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
