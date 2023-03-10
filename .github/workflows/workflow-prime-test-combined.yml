@@ -5,9 +5,10 @@ on:
     types: [opened]
 
 jobs:
+  if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
   add-label:
     runs-on: ubuntu-latest
-    if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
+#    if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
     steps:
     - uses: actions/checkout@v2
     - uses: actions-ecosystem/action-add-labels@v1
@@ -15,7 +16,7 @@ jobs:
         labels: activity-security-questionnaire
   move-to-project:
     runs-on: ubuntu-latest
-    if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
+#    if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
     steps:
     - uses: actions/add-to-project@v0.4.1
       with:
