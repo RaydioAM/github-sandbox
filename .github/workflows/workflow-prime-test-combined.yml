@@ -4,12 +4,12 @@ on:
   issues:
     types: [opened]
 
-permissions: write-all
+#permissions: write-all
 
-#permissions:
+permissions:
 #  contents: read
-#  issues: write
-#  repository-projects: write
+  issues: write
+  repository-projects: write
 
 jobs:
   add-label:
