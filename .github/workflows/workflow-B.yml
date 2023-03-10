@@ -4,7 +4,7 @@ on:
   workflow_call:
 
 jobs:
-  project:
+  move-to-project:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/add-to-project@v0.4.1
