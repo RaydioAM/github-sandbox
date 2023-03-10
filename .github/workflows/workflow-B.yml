@@ -1,0 +1,16 @@
+name: Workflow B - Project
+
+on:
+  workflow_call:
+
+jobs:
+  project:
+    runs-on: ubuntu-latest
+    name: ADD TO PROJECT
+    steps:
+    - uses: srggrs/assign-one-project-github-action@1.2.0
+      if: |
+        contains(github.event.issue.labels.*.name, 'activity-security-questionnaire')
+      with:
+        project: 'https://github.com/users/RaydioAM/projects/6'
+        column_name: 'TestCol1'
