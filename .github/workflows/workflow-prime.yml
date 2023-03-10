@@ -9,5 +9,5 @@ jobs:
     uses: ./.github/workflows/workflow-A.yml
   move-to-project:
     needs: add-label
-    uses: ./.github/workflows/workflow-B-test.yml
+    uses: ./.github/workflows/workflow-B.yml
     secrets: inherit
