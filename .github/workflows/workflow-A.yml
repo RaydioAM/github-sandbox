@@ -15,5 +15,4 @@ jobs:
       with:
         labels: activity-security-questionnaire
   call_next:
-    call-B:
-      uses: ./.github/workflows/workflow-B.yml
+    uses: ./.github/workflows/workflow-B.yml
