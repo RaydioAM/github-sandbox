@@ -8,6 +8,6 @@ jobs:
   label:
     uses: ./.github/workflows/workflow-A.yml
   project:
-    needs: add-label
+    needs: label
     uses: ./.github/workflows/workflow-B.yml
     secrets: inherit
