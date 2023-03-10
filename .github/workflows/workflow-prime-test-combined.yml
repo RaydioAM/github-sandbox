@@ -20,5 +20,5 @@ jobs:
 #    - uses: actions/checkout@v2
     - uses: actions-ecosystem/action-add-labels@bd52874380e3909a1ac983768df6976535ece7f8
       with:
-        token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        github_token: ${{ secrets.ADD_TO_PROJECT_PAT }}
         labels: activity-security-questionnaire
