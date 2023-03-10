@@ -1,5 +1,5 @@
 ---
-name: Testing template for auto-label Action
+name: Failing testing template for auto-label Action
 about: Purposely failing testing template for auto-label Action
 title: "Test RFI Issue"
 labels: ''
