@@ -1,8 +1,5 @@
 name: Workflow A - Label
 
-# on:
-#  workflow_call:
-
 on:
   issues:
     types: [opened]
