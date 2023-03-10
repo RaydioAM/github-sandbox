@@ -5,12 +5,9 @@ on:
     types: [opened]
 
 jobs:
-  call-A:
-#    uses: ./.github/workflows/workflow-B-test.yml
-#    secrets: inherit
+  add-label:
     uses: ./.github/workflows/workflow-A.yml
-  call-B:
-    needs: call-A
-#    uses: ./.github/workflows/workflow-B.yml
+  move-to-project:
+    needs: add-label
     uses: ./.github/workflows/workflow-B-test.yml
     secrets: inherit
