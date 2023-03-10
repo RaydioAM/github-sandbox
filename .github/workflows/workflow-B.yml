@@ -3,9 +3,6 @@ name: Workflow B - Project
 on:
   workflow_call:
 
-env:
-  GITHUB_TOKEN: ${{ secrets.TEST_ALL_EVERYTHING }}
-
 jobs:
   project:
     runs-on: ubuntu-latest
