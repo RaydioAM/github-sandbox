@@ -1,4 +1,4 @@
-name: Workflow B - Project
+name: Salesforce Security RFI - Add-to-Project Workflow
 
 on:
   workflow_call:
@@ -6,7 +6,6 @@ on:
 jobs:
   project:
     runs-on: ubuntu-latest
-    name: ADD TO PROJECT
     steps:
     - uses: actions/add-to-project@v0.4.1
       if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}

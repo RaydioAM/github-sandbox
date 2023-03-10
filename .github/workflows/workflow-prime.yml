@@ -1,4 +1,4 @@
-name: Top-Level Action Caller
+name: Salesforce Security RFI - Caller Workflow
 
 on:
   issues:

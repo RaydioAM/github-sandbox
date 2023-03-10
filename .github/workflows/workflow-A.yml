@@ -1,4 +1,4 @@
-name: Workflow A - Label
+name: Salesforce Security RFI - Label Workflow
 
 on:
   workflow_call:
@@ -6,7 +6,6 @@ on:
 jobs:
   label:
     runs-on: ubuntu-latest
-    name: ADD LABEL
     steps:
     - uses: actions/checkout@v2
     - uses: actions-ecosystem/action-add-labels@v1
