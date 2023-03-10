@@ -10,5 +10,3 @@ jobs:
   call-B:
     needs: call-A
     uses: ./.github/workflows/workflow-B.yml
-    secrets:
-      token: ${{ secrets.TEST_ALL_EVERYTHING }}
