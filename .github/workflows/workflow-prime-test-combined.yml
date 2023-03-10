@@ -5,7 +5,6 @@ on:
     types: [opened]
 
 jobs:
-  if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
   add-label:
     runs-on: ubuntu-latest
 #    if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
@@ -22,3 +21,4 @@ jobs:
       with:
         project-url: https://github.com/users/RaydioAM/projects/3
         github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+  if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
