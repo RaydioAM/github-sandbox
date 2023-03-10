@@ -5,9 +5,9 @@ on:
     types: [opened]
 
 jobs:
-  add-label:
+  label:
     uses: ./.github/workflows/workflow-A.yml
-  move-to-project:
+  project:
     needs: add-label
     uses: ./.github/workflows/workflow-B.yml
     secrets: inherit
