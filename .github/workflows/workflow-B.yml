@@ -3,6 +3,9 @@ name: Workflow B - Project
 on:
   workflow_call:
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   project:
     runs-on: ubuntu-latest
