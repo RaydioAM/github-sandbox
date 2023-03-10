@@ -5,6 +5,7 @@ on:
     types: [opened]
 
 permissions:
+  actions: read
   issues: write
   repository-projects: write
 
