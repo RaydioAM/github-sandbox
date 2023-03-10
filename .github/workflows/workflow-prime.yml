@@ -1,0 +1,12 @@
+name: Top-Level Action Caller
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  name: CALLER
+  call-A:
+    uses: ./.github/workflows/workflow-A.yml
+  call-B:
+    uses: ./.github/workflows/workflow-B.yml
