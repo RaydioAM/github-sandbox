@@ -7,8 +7,8 @@ on:
 jobs:
   label:
     runs-on: ubuntu-latest
+    name: ADD LABEL
     steps:
-    - name: ADD LABEL
     - uses: actions/checkout@v2
     - uses: actions-ecosystem/action-add-labels@v1
       if: ${{ startsWith(github.event.issue.body, '# Security Request for Information (RFI)') }}
@@ -17,8 +17,8 @@ jobs:
   project:
     needs: label
     runs-on: ubuntu-latest
+    name: ADD TO PROJECT
     steps:
-    - name: ADD TO PROJECT
     - uses: srggrs/assign-one-project-github-action@1.2.0
       if: |
         contains(github.event.issue.labels.*.name, 'activity-security-questionnaire')
