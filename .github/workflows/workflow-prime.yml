@@ -6,9 +6,10 @@ on:
 
 jobs:
   call-A:
-    uses: ./.github/workflows/workflow-B-test.yml
+#    uses: ./.github/workflows/workflow-B-test.yml
+#    secrets: inherit
+    uses: ./.github/workflows/workflow-A.yml
+  call-B:
+    needs: call-A
+    uses: ./.github/workflows/workflow-B.yml
     secrets: inherit
-#    uses: ./.github/workflows/workflow-A.yml
-#  call-B:
-#    needs: call-A
-#    uses: ./.github/workflows/workflow-B.yml
