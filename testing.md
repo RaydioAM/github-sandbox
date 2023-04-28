@@ -11,3 +11,7 @@ It does not appear **[INSERT COMPANY NAME]** has a Non-Disclosure Agreement with
 
 We require you to agree that, notwithstanding anything to the contrary in your terms or elsewhere, **[INSERT COMPANY NAME]** will not sell, license, or otherwise redistribute in any manner the information GitHub provides, except to existing GitHub customers. By replying to this email with your agreement to this limitation, you represent that you have authority to bind **[INSERT COMPANY NAME]** to it.
 ```
+
+#### Outcome
+
+GitHub doesn't do wrapping inside of codeblocks. Decisions will need to be made on if it's better to see all of the text or to have the quick copy functionality.
