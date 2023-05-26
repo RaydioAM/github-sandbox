@@ -7,7 +7,7 @@ body:
     id: product
     attributes:
       label: Product(s)
-      description: Which product(s) does the customer want to discuss? Note: GHES and Proxima calls are currently outside of CST's ability to service, and will be evaluated on a case by case basis. Proxima will likely be supported by CST at a future date.
+      description: Which product(s) does the customer want to discuss? Note/: GHES and Proxima calls are currently outside of CST's ability to service, and will be evaluated on a case by case basis. Proxima will likely be supported by CST at a future date.
       multiple: true
       options:
         - GitHub Enterprise Cloud
