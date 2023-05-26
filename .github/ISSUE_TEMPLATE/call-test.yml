@@ -1,4 +1,4 @@
-name: Security Call Request
+name: Customer Call Request - Security
 description: Request that a CST member attend a customer call to discuss security topics.
 title: "Call Request: <CUSTOMER>"
 labels: ["call-request"]
@@ -20,8 +20,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        > **Warning**  
-        > GHES and Proxima calls are currently outside of CST's ability to service, and will be evaluated on a case by case basis. Proxima will likely be supported by CST at a future date.
+        _**Note:** GHES and Proxima calls are currently outside of CST's ability to service, and will be evaluated on a case by case basis. Proxima will likely be supported by CST at a future date._
   - type: dropdown
     id: size
     attributes:
