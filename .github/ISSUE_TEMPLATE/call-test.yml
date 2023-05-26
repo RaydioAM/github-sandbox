@@ -1,0 +1,54 @@
+name: Security Call Request
+description: Request that a CST member attend a customer call to discuss security topics.
+title: "Call Request: <CUSTOMER>"
+labels: ["call-request"]
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product(s)
+      description: Which product(s) does the customer want to discuss?
+      multiple: true
+      options:
+        - GitHub Enterprise Cloud
+        - Copilot for Business
+        - Actions
+        - Codespaces
+        - Other (please explain below)
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        > **Warning**  
+        > GHES and Proxima calls are currently outside of CST's ability to service, and will be evaluated on a case by case basis. Proxima will likely be supported by CST at a future date.
+  - type: dropdown
+    id: size
+    attributes:
+      label: Opportunity/Account Size
+      description: How large is the account/opportunity?
+      options:
+        - Greater than or equal to $50,000
+        - Less than $50,000
+    validations:
+      required: true
+  - type: input
+    id: related_issue
+    attributes:
+      label: Related Issue
+      description: Is this call related to an existing security RFI issue?
+      placeholder: Paste the Issue URL here
+    validations:
+      required: false
+  - type: textarea
+    id: explain
+    attributes:
+      label: Context
+      description: Add additional context around the customer's request here.
+      placeholder: |
+        - A short explanation of what the customer wants to discuss
+        - Questions the customer has already provided
+        - Any history/context that will help CST better serve the customer
+        - Explain why "Other" was selected for the product in question
+    validations:
+      required: true
