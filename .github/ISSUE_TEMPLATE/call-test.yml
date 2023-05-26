@@ -9,8 +9,8 @@ body:
       label: Product(s)
       description: |
         Which product(s) does the customer want to discuss?
-        
-        _**NOTE:** GHES and Proxima calls are currently outside of CST's ability to service, and will be evaluated on a case by case basis. Proxima will likely be supported by CST at a future date._
+
+        _**Note:** GHES and Proxima calls are currently outside of CST's ability to service, and will be evaluated on a case by case basis. Proxima will likely be supported by CST at a future date._
       multiple: true
       options:
         - GitHub Enterprise Cloud
@@ -24,12 +24,23 @@ body:
     id: size
     attributes:
       label: Opportunity/Account Size
-      description: How large is the account/opportunity?
+      description: |
+        How large is the relevant opportunity? 
+        
+        _**Note:** If the opportunity is small compared to the overall account, use the account size._
       options:
         - Greater than or equal to $50,000
         - Less than $50,000
     validations:
       required: true
+  - type: input
+    id: related_SFDC
+    attributes:
+      label: Related Salesforce Link
+      description: Is this call in reference to a particular Salesforce Opportunity?
+      placeholder: Paste the opportunity URL here
+    validations:
+      required: false
   - type: input
     id: related_issue
     attributes:
