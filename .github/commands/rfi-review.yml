@@ -1,0 +1,18 @@
+# Learn more about the syntax here:
+# https://docs.github.com/en/early-access/github/save-time-with-slash-commands/syntax-for-user-defined-slash-commands
+---
+trigger: review # <-- 👋 pick a trigger
+title: RFI Review   # <-- 👋 pick a title
+surfaces:
+  - issue
+description: Indicates you've completed your first pass on the RFI and request that CST reviews it.
+
+steps:
+  - type: fill
+    template: |-
+      First pass has been completed on this RFI it's now ready for CST review! :rocket:
+
+      CC: @RaydioAM
+    submit_form: yes
+  #- type: repository_dispatch
+  #  eventType: special_merge
